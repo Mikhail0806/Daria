@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>Приглашение — Михаил и Дарья</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&family=Playfair+Display&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body, html {
+      font-family: 'Montserrat', sans-serif;
+      color: #3d3d3d;
+      background: #fff;
+      scroll-behavior: smooth;
+    }
+
+    .hero {
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      background-image: url('https://blog.overthemoon.com/wp-content/uploads/2022/09/over-the-moon-ah-ak6-1025x1536.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+    .date-top {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8rem;
+      letter-spacing: 4px;
+      margin-bottom: 20px;
+    }
+    .wedding-day {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem;
+      color: #b98e6c;
+      margin-bottom: 10px;
+    }
+    .its-our {
+      font-style: italic;
+      font-size: 1.4rem;
+      color: #5a4b3c;
+      margin-bottom: 40px;
+    }
+    .names {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: #6b5645;
+      position: absolute;
+      bottom: 40px;
+      right: 40px;
+    }
+
+    .section-white {
+      background: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .section-white h2 {
+      font-size: 2rem;
+      margin-bottom: 30px;
+      font-family: 'Playfair Display', serif;
+    }
+    .section-white p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: 0 auto 60px;
+      line-height: 1.6;
+    }
+
+    .calendar-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .calendar-container h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+    .calendar {
+      display: grid;
+      grid-template-columns: repeat(7, 40px);
+      gap: 8px;
+    }
+    .day {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      color: #333;
+    }
+    .heart-day {
+      background: url('data:image/svg+xml;utf8,<svg width="40" height="40" viewBox="0 0 24 24" fill="%23e1b7a0" xmlns="http://www.w3.org/2000/svg"><path d="M12 21s-6.29-4.35-9.14-8.26C1.09 10.18 2.11 6.05 5.47 5.13 7.26 4.63 9.1 5.27 10.32 6.6c.39.42.74.89 1.05 1.38.31-.49.66-.96 1.05-1.38 1.22-1.33 3.06-1.97 4.85-1.47 3.36.92 4.38 5.05 2.61 7.61C18.29 16.65 12 21 12 21z"/></svg>') no-repeat center;
+      background-size: contain;
+      font-weight: bold;
+      color: #fff;
+    }
+    .calendar-footer {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Первая условная страница -->
+  <section class="hero">
+    <div class="date-top">05|09|2025</div>
+    <div class="wedding-day">Wedding Day</div>
+    <div class="its-our">it's our</div>
+    <div class="names">Михаил и Дарья</div>
+  </section>
+
+  <!-- Вторая условная страница -->
+  <section class="section-white">
+    <h2>Дорогие гости!</h2>
+    <p>Спешим сообщить радостную новость — мы женимся!<br>
+    В этот день мы очень хотим оказаться в окружении самых близких и дорогих для нас людей.</p>
+
+    <div class="calendar-container">
+      <h3>Сентябрь</h3>
+      <div class="calendar">
+        <div class="day">Пн</div>
+        <div class="day">Вт</div>
+        <div class="day">Ср</div>
+        <div class="day">Чт</div>
+        <div class="day">Пт</div>
+        <div class="day">Сб</div>
+        <div class="day">Вс</div>
+
+        <div class="day">1</div>
+        <div class="day">2</div>
+        <div class="day">3</div>
+        <div class="day">4</div>
+        <div class="day heart-day">5</div>
+        <div class="day">6</div>
+        <div class="day">7</div>
+        <div class="day">8</div>
+        <div class="day">9</div>
+        <div class="day">10</div>
+        <div class="day">11</div>
+        <div class="day">12</div>
+        <div class="day">13</div>
+        <div class="day">14</div>
+        <div class="day">15</div>
+        <div class="day">16</div>
+        <div class="day">17</div>
+        <div class="day">18</div>
+        <div class="day">19</div>
+        <div class="day">20</div>
+        <div class="day">21</div>
+        <div class="day">22</div>
+        <div class="day">23</div>
+        <div class="day">24</div>
+        <div class="day">25</div>
+        <div class="day">26</div>
+        <div class="day">27</div>
+        <div class="day">28</div>
+        <div class="day">29</div>
+        <div class="day">30</div>
+      </div>
+      <div class="calendar-footer">2025</div>
+    </div>
+  </section>
+
+</body>
+</html>
