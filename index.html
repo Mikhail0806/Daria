@@ -19,6 +19,16 @@
       scroll-behavior: smooth;
     }
 
+    section {
+      padding-bottom: 80px; /* отступ снизу для разделения */
+      border-bottom: 1px solid #ddd; /* тонкая разделительная линия */
+    }
+
+    section:last-child {
+      border-bottom: none; /* у последней секции линии нет */
+      padding-bottom: 40px;
+    }
+
     .hero {
       position: relative;
       height: 100vh;
@@ -113,6 +123,125 @@
       font-size: 1.2rem;
       color: #999;
     }
+
+    /* Страница 3 - Место торжества */
+    .section-white.page3 {
+      padding-top: 80px;
+      padding-bottom: 40px;
+      border-bottom: none;
+    }
+
+    .section-title {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #3d3d3d;
+    }
+
+    .venue-image-container {
+      position: relative;
+      width: 100%;
+      height: 500px;
+      background: url('https://raw.githubusercontent.com/Mikhail0806/photos/2e25209366f9ffc369583b727311a5d617554279/page3.jpg') no-repeat center center;
+      background-size: cover;
+      filter: brightness(1.1);
+    }
+
+    .venue-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .venue-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #5a4333;
+      margin-bottom: 20px;
+      margin-top: -80px;
+    }
+
+    .venue-address {
+      font-size: 1rem;
+      color: #333;
+      margin-bottom: 40px;
+      line-height: 1.5;
+    }
+
+    .map-button {
+      margin-top: 60px;
+      padding: 16px 40px;
+      background-color: #b98e6c;
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 500;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+      width: 200px;
+      text-align: center;
+    }
+
+    .map-button:hover {
+      background-color: #a77959;
+    }
+
+    @media (max-width: 600px) {
+      .section-title {
+        font-size: 2rem;
+      }
+      .venue-title {
+        font-size: 1.6rem;
+        margin-top: -60px;
+      }
+      .venue-address {
+        font-size: 0.95rem;
+      }
+      .map-button {
+        font-size: 1.1rem;
+        width: 85%;
+        padding: 14px;
+      }
+
+      .calendar {
+        grid-template-columns: repeat(7, 30px);
+        gap: 6px;
+      }
+
+      .day {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+      }
+
+      .date-top {
+        font-size: 1.4rem;
+        letter-spacing: 3px;
+      }
+
+      .wedding-day {
+        font-size: 2.8rem;
+      }
+
+      .its-our {
+        font-size: 1.1rem;
+      }
+
+      .names {
+        font-size: 1.2rem;
+        bottom: 20px;
+        right: 20px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -173,9 +302,25 @@
         <div class="day">29</div>
         <div class="day">30</div>
       </div>
-      <div class="calendar-footer">2025</div>
+      <div class="calendar-footer">5 сентября — важный день для нас!</div>
+    </div>
+  </section>
+
+  <!-- Третья условная страница -->
+  <section class="section-white page3">
+    <h2 class="section-title">Место торжества</h2>
+
+    <div class="venue-image-container">
+      <div class="venue-overlay">
+        <div class="venue-title">Ресторан Флагман</div>
+        <div class="venue-address">Краснодарский край, г. Тимашевск, ул. Красная 56/1</div>
+        <a href="https://yandex.ru/maps/?text=Краснодарский край, г. Тимашевск, ул. Красная 56/1" target="_blank" class="map-button">
+          Смотреть карту →
+        </a>
+      </div>
     </div>
   </section>
 
 </body>
 </html>
+
