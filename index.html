@@ -79,6 +79,7 @@
       font-size: 2rem;
       margin-bottom: 30px;
       font-family: 'Playfair Display', serif;
+      color: #3d3d3d;
     }
     .section-white p {
       font-size: 1.2rem;
@@ -128,14 +129,6 @@
       padding-top: 80px;
       padding-bottom: 40px;
       border-bottom: none;
-    }
-
-    .section-title {
-      text-align: center;
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      margin-bottom: 40px;
-      color: #3d3d3d;
     }
 
     .venue-image-container {
@@ -194,100 +187,57 @@
       background-color: #a77959;
     }
 
-    /* Страница 4 - Программа дня */
+    /* Страница 4 - Программа дня (НОВАЯ ВЕРСИЯ) */
     .section-white.page4 {
-      padding: 40px 20px 80px;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    
+    .section-white.page4 .schedule {
       max-width: 600px;
       margin: 0 auto;
-      text-align: center;
-      background-color: white;
-    }
-
-    .schedule {
+      padding-left: 100px;
       display: flex;
       flex-direction: column;
-      gap: 40px;
-      padding-left: 100px;
     }
 
-    .schedule-item {
-      position: relative;
+    .section-white.page4 .schedule-item {
       display: flex;
       align-items: center;
-      gap: 20px;
-      z-index: 1;
+      padding: 15px 0;
     }
 
-    .time-circle {
-      position: relative;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-      border: 2px solid #b98e6c;
-      background-color: #b98e6c;
-      flex-shrink: 0;
-      box-shadow: 0 0 5px rgba(185, 142, 108, 0.4);
-      z-index: 2;
-    }
-
-    .schedule-item:not(:last-child) .time-circle::after {
-      content: "";
-      position: absolute;
-      top: 24px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 2px;
-      height: 40px;
-      background-color: #b98e6c;
-      z-index: 1;
-    }
-
-    .time-text {
+    .section-white.page4 .time-text {
+      width: 60px;
       font-weight: 700;
       font-size: 1.2rem;
       color: #b98e6c;
-      min-width: 60px;
-      text-align: left;
-      user-select: none;
+      text-align: right;
+      margin-right: 20px;
     }
 
-    .event {
-      flex: 1;
+    .section-white.page4 .event {
       font-size: 1.3rem;
       color: #6b5645;
-      text-align: left;
       font-weight: 500;
     }
 
-    @media (max-width: 600px) {
-      .section-white.page4 {
-        padding-left: 10px;
-        padding-right: 10px;
-        max-width: 100%;
-      }
-      .schedule {
-        padding-left: 80px;
-      }
-      .time-circle {
-        width: 20px;
-        height: 20px;
-      }
-      .schedule-item:not(:last-child) .time-circle::after {
-        height: 30px;
-        top: 20px;
-      }
-      .time-text {
-        font-size: 1rem;
-        min-width: 50px;
-      }
-      .event {
-        font-size: 1.1rem;
-      }
+    .section-white.page4 .divider {
+      height: 1px;
+      background: rgba(185, 142, 108, 0.15);
+      margin: 10px 0;
     }
 
-    @media (max-width: 480px) {
-      .schedule {
-        padding-left: 70px;
+    @media (max-width: 600px) {
+      .section-white.page4 .schedule {
+        padding-left: 80px;
+      }
+      .section-white.page4 .time-text {
+        font-size: 1rem;
+        width: 50px;
+      }
+      .section-white.page4 .event {
+        font-size: 1.1rem;
       }
     }
   </style>
@@ -369,43 +319,62 @@
     </div>
   </section>
 
-  <!-- Четвертая страница -->
+  <!-- Четвертая страница (НОВАЯ ВЕРСИЯ) -->
   <section class="section-white page4">
-    <h2 class="section-title">Программа дня</h2>
+    <h2>Программа дня</h2>
     <div class="schedule">
+      <!-- Пункт 1 -->
       <div class="schedule-item">
         <div class="time-text">16:00</div>
-        <div class="time-circle"></div>
         <div class="event">Сбор гостей</div>
       </div>
+      
+      <!-- Разделитель -->
+      <div class="divider"></div>
+      
+      <!-- Пункт 2 -->
       <div class="schedule-item">
         <div class="time-text">16:30</div>
-        <div class="time-circle"></div>
         <div class="event">Церемония</div>
       </div>
+      
+      <div class="divider"></div>
+      
+      <!-- Пункт 3 - Банкет -->
       <div class="schedule-item">
         <div class="time-text">17:00</div>
-        <div class="time-circle"></div>
         <div class="event">Банкет</div>
       </div>
+      
+      <div class="divider"></div>
+      
+      <!-- Пункт 4 -->
       <div class="schedule-item">
         <div class="time-text">21:30</div>
-        <div class="time-circle"></div>
         <div class="event">Вынос торта</div>
       </div>
+      
+      <div class="divider"></div>
+      
+      <!-- Пункт 5 -->
       <div class="schedule-item">
         <div class="time-text">22:00</div>
-        <div class="time-circle"></div>
         <div class="event">Финал вечера</div>
       </div>
+      
+      <div class="divider"></div>
+      
+      <!-- Пункт 6 -->
       <div class="schedule-item">
         <div class="time-text">23:00</div>
-        <div class="time-circle"></div>
         <div class="event">Дискотека</div>
       </div>
+      
+      <div class="divider"></div>
+      
+      <!-- Пункт 7 -->
       <div class="schedule-item">
         <div class="time-text">23:30</div>
-        <div class="time-circle"></div>
         <div class="event">Окончание вечера</div>
       </div>
     </div>
